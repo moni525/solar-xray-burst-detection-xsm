@@ -71,24 +71,25 @@ The system automatically computes:
 - Event classification
 
 ---
-
-
 ## Project Structure
+
+```
 solar-xray-burst-detection-xsm/
 │
 ├── backend/
-│ ├── main.py
-│ ├── processor.py
-│ └── requirements.txt
+│   ├── main.py
+│   ├── processor.py
+│   └── requirements.txt
 │
 ├── frontend/
-│ ├── src/
-│ ├── public/
-│ ├── index.html
-│ └── package.json
+│   ├── src/
+│   ├── public/
+│   ├── index.html
+│   └── package.json
 │
 ├── README.md
 └── .gitignore
+```
 
 ---
 
