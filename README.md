@@ -1,32 +1,169 @@
 # HelioTrack: Solar X-ray Burst Identification
 
-This project automates the detection and classification of Solar X-ray bursts using ISRO PRADAN data.
+HelioTrack is an automated system for detecting and classifying solar X-ray bursts using Chandrayaan-2 Solar X-ray Monitor (XSM) light-curve data from the ISRO PRADAN archive. The system performs burst detection from time-series signals, extracts burst parameters, and classifies burst severity with an interactive visualization dashboard.
 
-## Quick Start (Automatic)
+---
 
-The development environment is pre-configured and already running in this workspace. 
+## Problem Statement
 
-### 1. Backend (FastAPI)
-Running on `http://localhost:8000`. 
-If you need to restart it manually, use:
-```powershell
-backend\venv\Scripts\python.exe backend\main.py
-```
+Solar X-ray bursts exhibit rapid rise and slow decay patterns in light-curve data. Manual detection is time-consuming and error-prone. This project provides an automated pipeline for:
 
-### 2. Frontend (Vite + React)
-Running on `http://localhost:5173` (or `5174`).
-If you need to restart it manually, use:
-```bash
+- Detecting burst events
+- Extracting burst parameters
+- Classifying burst intensity
+- Visualizing solar activity interactively
+
+---
+
+## Dataset Source
+
+Dataset: Chandrayaan-2 Solar X-ray Monitor (XSM)  
+Source: ISRO PRADAN Archive  
+Energy Band: 0.8–15 keV  
+Format: Level-2 calibrated light curve (.lc)
+
+Supported formats:
+
+- `.lc`
+- `.fits`
+- `.csv`
+- `.ascii`
+- `.xls`
+
+---
+
+## Features
+
+- Automated solar X-ray burst detection
+- Peak flux identification
+- Burst start and end detection
+- Burst duration estimation
+- Severity classification (e.g., X-Class)
+- Background subtraction option
+- Adjustable smoothing window
+- Interactive visualization dashboard
+- Support for multiple scientific data formats
+
+---
+
+## System Architecture
+
+Frontend:
+React + Vite + TypeScript
+
+Backend:
+FastAPI + Python signal processing
+
+Visualization:
+Interactive solar X-ray light-curve plotting
+
+---
+
+## Burst Parameters Extracted
+
+The system automatically computes:
+
+- Peak flux
+- Burst duration
+- Burst start time
+- Burst end time
+- Detection confidence
+- Event classification
+
+---
+
+
+## Project Structure
+solar-xray-burst-detection-xsm/
+│
+├── backend/
+│ ├── main.py
+│ ├── processor.py
+│ └── requirements.txt
+│
+├── frontend/
+│ ├── src/
+│ ├── public/
+│ ├── index.html
+│ └── package.json
+│
+├── README.md
+└── .gitignore
+
+---
+
+## Installation & Setup
+
+### Backend (FastAPI)
+
+Run:
+cd backend
+pip install -r requirements.txt
+python main.py
+
+Backend runs on:
+http://localhost:8000
+
+---
+
+### Frontend (React + Vite)
+
+Run:
 cd frontend
+npm install
 npm run dev
-```
 
-## Troubleshooting
 
-- **"Failed to fetch" Error**: This usually means the backend server is not running or the URL in `App.tsx` (default `localhost:8000`) is blocked. Ensure the backend is started using the command above.
-- **"ModuleNotFoundError: No module named 'scipy'"**: This happens if you run `python main.py` without the virtual environment. Always use the path `backend\venv\Scripts\python.exe` or activate the environment first.
+Frontend runs on:
+http://localhost:5173
+---
 
-## Data Formats
+## Visualization
 
-- **.fits / .lc**: Standard ISRO Chandrayaan-2/XSM format.
-- **.csv / .txt**: Should contain columns with "time" and "rate" (or "counts") in the header. (Try the `backend\sample_data.csv` for a demonstration).
+The dashboard provides:
+
+- Interactive solar X-ray light-curve plotting
+- Burst detection markers
+- Adjustable detection threshold
+- Smoothing controls
+- Background subtraction toggle
+- ML classification toggle
+- Burst statistics panel
+
+---
+
+## Detection Methodology
+
+Burst detection is performed using time-series signal processing:
+
+1. Background subtraction
+2. Noise smoothing
+3. Threshold-based peak detection
+4. Burst boundary identification
+5. Parameter extraction
+6. Severity classification
+
+---
+
+## Applications
+
+- Space weather monitoring
+- Solar activity analysis
+- Scientific research automation
+- Satellite instrumentation analytics
+- Astroinformatics workflows
+
+---
+
+## Future Improvements
+
+- Real-time burst monitoring
+- Deep learning-based classification
+- Multi-band solar flare analysis
+- Web deployment support
+
+---
+
+## Authors
+
+Developed as part of the Neural Nexus AI/ML Hackathon submission using ISRO PRADAN solar X-ray data.
