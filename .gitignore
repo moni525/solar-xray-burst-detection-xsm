@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies
 node_modules/
 dist/
@@ -12,3 +13,30 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+=======
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+
+# Uploads & Data
+uploads/
+*.csv
+*.fits
+*.ascii
+*.xls
+*.xlsx
+
+# Local Tools
+.gemini/
+.agent/
+.vscode/
+*.log
+>>>>>>> 14d73ff (Initialize SolarXray Dashboard with Research-Grade UI and Analytics Features)
