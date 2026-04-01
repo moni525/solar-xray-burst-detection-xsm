@@ -1,0 +1,25 @@
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+
+# Uploads & Data
+uploads/
+*.csv
+*.fits
+*.ascii
+*.xls
+*.xlsx
+
+# Local Tools
+.gemini/
+.agent/
+.vscode/
+*.log
