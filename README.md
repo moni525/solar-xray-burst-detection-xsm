@@ -17,9 +17,10 @@ Solar X-ray bursts exhibit rapid rise and slow decay patterns in light-curve dat
 
 ## Dataset Source
 
-Dataset: Chandrayaan-2 Solar X-ray Monitor (XSM)  
-Source: ISRO PRADAN Archive  
-Energy Band: 0.8–15 keV  
+Dataset: Chandrayaan-2 Solar X-ray Monitor (XSM) Level-2 Light Curve Data
+Source: Indian Space Research Organisation PRADAN Archive
+File Path: frontend/ch2_xsm_20260315_v1_level2.lc
+Energy Band: 0.8 – 15 keV
 Format: Level-2 calibrated light curve (.lc)
 
 Supported formats:
